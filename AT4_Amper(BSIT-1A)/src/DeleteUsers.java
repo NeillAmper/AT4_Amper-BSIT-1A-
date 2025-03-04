@@ -6,6 +6,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
+
 public class DeleteUsers extends javax.swing.JFrame {
 
     private static final String FILE_PATH = "src/Data.json"; //This connects the Data.json file to this JFrame
@@ -127,20 +128,18 @@ public class DeleteUsers extends javax.swing.JFrame {
                 "Are you sure you want to delete the user '" + usernameToDelete + "'?",
                 "Confirm Deletion",
                 JOptionPane.YES_NO_OPTION);
+
         if (confirm != JOptionPane.YES_OPTION) {
+            JOptionPane.showMessageDialog(null, "User deletion canceled.", "Canceled", JOptionPane.INFORMATION_MESSAGE);
             return;
             //These lines of code makes the Confirmation JOptionPane prompt, asking the user if they want to confirm the deletion of a user.
-
-        } else {
-            JOptionPane.showMessageDialog(null, "User deletion canceled.", "Canceled", JOptionPane.INFORMATION_MESSAGE);
-            //If no, it will cancel the deletion.
         }
 
         try {
             File file = new File(FILE_PATH);
             if (!file.exists()) {
                 JOptionPane.showMessageDialog(null, "User data file not found!");
-                return; //This prompts whenever the user inputted does not exist in the json file when checked.
+                return;
             }
 
             JSONParser jsonParser = new JSONParser();
@@ -184,8 +183,8 @@ public class DeleteUsers extends javax.swing.JFrame {
     }//GEN-LAST:event_DeleteActionPerformed
 
     public static void main(String args[]) {
-        java.awt.EventQueue.invokeLater(() -> new DeleteUsers().setVisible(true));
-    }
+    java.awt.EventQueue.invokeLater(() -> new DeleteUsers().setVisible(true));
+}
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Back;
