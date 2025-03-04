@@ -34,7 +34,7 @@ public class UpdateUser extends javax.swing.JFrame {
         NewUserName = new javax.swing.JTextField();
         NewPsswrd = new javax.swing.JTextField();
         NewType = new javax.swing.JTextField();
-        Back = new javax.swing.JButton();
+        BACK = new javax.swing.JButton();
         Clear = new javax.swing.JButton();
         Update = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
@@ -42,17 +42,25 @@ public class UpdateUser extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 15)); // NOI18N
+        jPanel1.setBackground(new java.awt.Color(184, 71, 99));
+
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(252, 239, 239));
         jLabel1.setText("New Username:");
 
-        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 15)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(252, 239, 239));
         jLabel2.setText("New Password:");
 
-        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 15)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(252, 239, 239));
         jLabel3.setText("New Type:");
 
+        jLabel4.setFont(new java.awt.Font("Papyrus", 0, 24)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(248, 248, 248));
         jLabel4.setText("UPDATE USER");
 
+        NewUserName.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         NewUserName.setText("Enter New Username");
         NewUserName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -60,6 +68,7 @@ public class UpdateUser extends javax.swing.JFrame {
             }
         });
 
+        NewPsswrd.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         NewPsswrd.setText("Enter New Password");
         NewPsswrd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -67,33 +76,37 @@ public class UpdateUser extends javax.swing.JFrame {
             }
         });
 
+        NewType.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         NewType.setText("Admin/Member");
 
-        Back.setText("Back");
-        Back.addActionListener(new java.awt.event.ActionListener() {
+        BACK.setText("BACK");
+        BACK.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BackActionPerformed(evt);
+                BACKActionPerformed(evt);
             }
         });
 
-        Clear.setText("Clear");
+        Clear.setText("CLEAR");
         Clear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ClearActionPerformed(evt);
             }
         });
 
-        Update.setText("Update");
+        Update.setBackground(new java.awt.Color(230, 91, 122));
+        Update.setForeground(new java.awt.Color(255, 255, 255));
+        Update.setText("UPDATE");
         Update.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 UpdateActionPerformed(evt);
             }
         });
 
-        jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 15)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(252, 239, 239));
         jLabel5.setText("Username:");
 
-        UserName.setFont(new java.awt.Font("Didot", 0, 13)); // NOI18N
+        UserName.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         UserName.setText("Enter Existing User");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -101,66 +114,59 @@ public class UpdateUser extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(116, 116, 116)
+                .addComponent(jLabel4)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(52, 52, 52)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                            .addContainerGap()
-                            .addComponent(Back)
-                            .addGap(33, 33, 33)
-                            .addComponent(Clear)
-                            .addGap(134, 134, 134))
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addGap(47, 47, 47)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addGap(3, 3, 3)
-                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabel2)
-                                        .addComponent(jLabel3)
-                                        .addComponent(jLabel1)))
-                                .addComponent(jLabel5))
-                            .addGap(95, 95, 95)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(UserName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(NewUserName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(NewType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addGap(64, 64, 64)
-                                    .addComponent(Update))
-                                .addComponent(NewPsswrd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addComponent(BACK)
+                    .addComponent(jLabel5)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel3))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(160, 160, 160)
-                        .addComponent(jLabel4)))
-                .addContainerGap(28, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 73, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(NewPsswrd, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(NewType, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(NewUserName, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(UserName, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(28, 28, 28)
+                        .addComponent(Clear)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(Update)))
+                .addGap(65, 65, 65))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(22, 22, 22)
+                .addGap(17, 17, 17)
                 .addComponent(jLabel4)
-                .addGap(13, 13, 13)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(UserName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel5))
-                        .addGap(35, 35, 35)
-                        .addComponent(jLabel1))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(UserName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel5))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
                     .addComponent(NewUserName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(NewPsswrd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(NewType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+                    .addComponent(NewType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3))
+                .addGap(28, 28, 28)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Back)
+                    .addComponent(Update)
                     .addComponent(Clear)
-                    .addComponent(Update))
-                .addGap(47, 47, 47))
+                    .addComponent(BACK))
+                .addGap(37, 37, 37))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -190,11 +196,11 @@ public class UpdateUser extends javax.swing.JFrame {
         //This sets or clears the Text Field to blank.
     }//GEN-LAST:event_ClearActionPerformed
 
-    private void BackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackActionPerformed
+    private void BACKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BACKActionPerformed
         Admin a = new Admin();
         a.setVisible(true); //This redirects or goes back to the Admin JFrame.
         setVisible(false); //This closes the UpdateUser JFrame after redirecting.
-    }//GEN-LAST:event_BackActionPerformed
+    }//GEN-LAST:event_BACKActionPerformed
 
     private void UpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UpdateActionPerformed
         String username = UserName.getText().trim();
@@ -304,7 +310,7 @@ public class UpdateUser extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Back;
+    private javax.swing.JButton BACK;
     private javax.swing.JButton Clear;
     private javax.swing.JTextField NewPsswrd;
     private javax.swing.JTextField NewType;

@@ -45,45 +45,57 @@ public class AddUsers extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Hiragino Mincho ProN", 0, 13)); // NOI18N
+        jPanel1.setBackground(new java.awt.Color(184, 71, 99));
+
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(252, 239, 239));
         jLabel1.setText("Username:");
 
-        jLabel2.setFont(new java.awt.Font("Hiragino Mincho ProN", 0, 13)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(252, 239, 239));
         jLabel2.setText("Password:");
 
-        jLabel3.setFont(new java.awt.Font("Hiragino Mincho ProN", 0, 13)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(252, 239, 239));
         jLabel3.setText("Confirm Password:");
 
+        AddUserName.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         AddUserName.setText("Enter Username");
 
-        Back.setText("Back");
+        Back.setText("BACK");
         Back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BackActionPerformed(evt);
             }
         });
 
-        AddUser.setText("Add");
+        AddUser.setBackground(new java.awt.Color(230, 91, 122));
+        AddUser.setForeground(new java.awt.Color(255, 255, 255));
+        AddUser.setText("ADD");
         AddUser.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 AddUserActionPerformed(evt);
             }
         });
 
-        Clear.setText("Clear");
+        Clear.setText("CLEAR");
         Clear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ClearActionPerformed(evt);
             }
         });
 
-        jLabel4.setFont(new java.awt.Font("Hiragino Mincho ProN", 0, 13)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(252, 239, 239));
         jLabel4.setText("Type:");
 
+        AddType.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         AddType.setText("Admin/Member");
 
+        AddPsswrd.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         AddPsswrd.setText("jPasswordField1");
 
+        AddCnfrmPsswrd.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         AddCnfrmPsswrd.setText("jPasswordField1");
         AddCnfrmPsswrd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -91,6 +103,8 @@ public class AddUsers extends javax.swing.JFrame {
             }
         });
 
+        jLabel5.setFont(new java.awt.Font("Papyrus", 1, 24)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(248, 248, 248));
         jLabel5.setText("ADD USER");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -107,23 +121,27 @@ public class AddUsers extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(Back)
                         .addGap(17, 17, 17)))
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(AddUserName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(AddType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(AddPsswrd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(AddCnfrmPsswrd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 88, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(AddUserName)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(41, 41, 41)
+                                .addComponent(AddUser))
+                            .addComponent(AddPsswrd)
+                            .addComponent(AddType)
+                            .addComponent(AddCnfrmPsswrd))
                         .addGap(14, 14, 14))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                        .addGap(12, 12, 12)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel5)
-                            .addComponent(Clear))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
-                        .addComponent(AddUser)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(13, 13, 13)
+                        .addComponent(Clear)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addGap(44, 44, 44))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(128, 128, 128)
+                .addComponent(jLabel5)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -134,19 +152,19 @@ public class AddUsers extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(AddUserName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(22, 22, 22)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(AddPsswrd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(26, 26, 26)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(AddCnfrmPsswrd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(AddType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Back)
                     .addComponent(AddUser)
